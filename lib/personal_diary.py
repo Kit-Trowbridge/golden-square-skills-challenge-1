@@ -6,4 +6,4 @@
 # and returns the number of words in that string.
 
 def count_words(string):
-    return len(string.split())
+    return string.split()
