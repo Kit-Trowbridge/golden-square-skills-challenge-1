@@ -5,9 +5,11 @@
 # A function called count_words that takes a string as an argument 
 # and returns the number of words in that string.
 
-def count_words(string):
-    return len(string.split())
+# def count_words(string):
+#     return len(string.split())
 
 def make_snippet(string):
-    if count_words(string) <= 5:
+    if len(string.split()) <= 5:
         return string
+    else:
+        pass
