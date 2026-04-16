@@ -7,4 +7,4 @@ def make_snippet(string):
         return string
     else:
         shortened_word_list = word_list[0:5]
-        return " ".join(shortened_word_list)
+        return " ".join(shortened_word_list) + "..."
