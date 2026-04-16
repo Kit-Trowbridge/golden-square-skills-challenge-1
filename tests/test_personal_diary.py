@@ -12,7 +12,7 @@ def test_make_snippet_returns_string():
 # need to test it can count how many words?
 
 def test_make_snippet_can_count_words():
-    result = count_words("Hello there")   
+    result = make_snippet("Hello there")   
     assert result == 2
 
 
