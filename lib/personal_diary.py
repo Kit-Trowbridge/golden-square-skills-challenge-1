@@ -6,4 +6,4 @@ def make_snippet(string):
     if len(word_list) <= 5:
         return string
     else:
-        return word_list.join(" ")
+        return " ".join(word_list)
