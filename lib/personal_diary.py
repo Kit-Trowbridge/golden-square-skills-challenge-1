@@ -3,3 +3,6 @@
 
 def make_snippet(string):
     return string
+
+def count_words(string):
+    pass
