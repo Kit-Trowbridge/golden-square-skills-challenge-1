@@ -56,24 +56,24 @@ estimate_reading_time("") => 0.0
 
 """
 2.
-Given a string of exactly 200 pure words (no em-dashes linking words)
+Given a string of exactly 200 pure words (no em-dashes linking words or hyphenated words)
 It returns 1
 """
 estimate_reading_time("-->string containing 200 pure words with no linking punctuation<--") => 1.0
 
 """
 3.
-Given a string of exactly 50 words
+Given a string of exactly 50 pure words
 It returns 0.25.
 """
-estimate_reading_time("-->string containing 50 words<--") => 0.25
+estimate_reading_time("-->string containing 50 pure words<--") => 0.25
 
 """
 4.
-Given a string of exactly 200 words containing em-dash with no spaces ()
-It returns 1
+Given a string of exactly 100 words containing hyphenated words,
+It returns 0.5
 """
-estimate_reading_time("-->string containing 200 words<--") => 2.0
+estimate_reading_time("-->string containing 100 words including hyphenated words<--") => 0.5
 
 """
 5.
@@ -83,6 +83,15 @@ It returns 0.5.
 estimate_reading_time("-->string containing 75 words<--") => 0.5
 
 """
+6.
+Given a string of exactly 200 words containing em-dash with no spaces (e.g. ..."other way—in short"...)
+It returns 1
+"""
+estimate_reading_time("-->string containing 200 words with em-dash<--") => 2.0
+
+
+"""
+7.
 Given a None value
 It throws an error
 """
