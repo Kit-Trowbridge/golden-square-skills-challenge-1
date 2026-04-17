@@ -38,6 +38,15 @@ def test_estimate_reading_time_returns_one_half_for_100_words_including_hyphens(
     result = estimate_reading_time(hundred_word_text_with_hyphens)
     assert result == 0.5
 
+"""
+Test 5
+Given a string of exactly 75 words
+It returns 0.5.
+"""
+def test_estimate_reading_time_returns_one_half_for_75_words():
+    result = estimate_reading_time(seventy_five_word_text)
+    assert result == 0.5
+
 # Text variables:
 
 # Test 2
@@ -48,6 +57,9 @@ fifty_word_text = "He was a man of about sixty, handsomely dressed, haughty in m
 
 # Test 4
 hundred_word_text_with_hyphens = "The passenger booked by this history, was on the coach-step, getting in; the two other passengers were close behind him, and about to follow. He remained on the step, half in the coach and half out of; they re-mained in the road below him. They all looked from the coachman to the guard, and from the guard to the coachman, and listened. The coachman looked back and the guard looked back, and even the emphatic leader pricked up his ears and looked back, without contradicting. The stillness consequent on the cessation of the rumbling and and labouring of the coach,"
+
+# Test 5
+seventy_five_word_text = "Happily unconscious of the new calamity at home, Miss Pross threaded her way along the narrow streets and crossed the river by the bridge of the Pont-Neuf, reckoning in her mind the number of indispensable purchases she had to make. Mr. Cruncher, with the basket, walked at her side. They both looked to the right and to the left into most of the shops they passed, had a wary eye for all gregarious assemblages of"
 
 # Test 6
 two_hundred_word_text_em_dash = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way--in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only. There were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France. In both countries it was clearer than crystal to the lords of the State preserves of loaves and fishes, that things in general were settled for ever. It was the year of Our Lord one thousand seven hundred and seventy-five. Spiritual"
