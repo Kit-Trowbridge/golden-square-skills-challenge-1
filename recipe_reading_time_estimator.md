@@ -13,7 +13,7 @@ _Include the name of the function, its parameters, return value, and side effect
 ```python
 # EXAMPLE
 
-def estimate_reading_time(text):
+def estimate_reading_time_in_minutes(text):
     """Determines the number of minutes it will take a user to read a text, with the formula of 200 words per minute.
 
     Parameters: (list all parameters and their types)
@@ -52,42 +52,42 @@ _Make a list of examples of what the function will take and return._
 Given an empty string
 It returns 0
 """
-estimate_reading_time("") => 0.0
+estimate_reading_time_in_minutes("") => 0.0
 
 """
 2.
 Given a string of exactly 200 pure words (no em-dashes linking words or hyphenated words)
 It returns 1
 """
-estimate_reading_time("-->string containing 200 pure words with no linking punctuation<--") => 1.0
+estimate_reading_time_in_minutes("-->string containing 200 pure words with no linking punctuation<--") => 1.0
 
 """
 3.
 Given a string of exactly 50 pure words
 It returns 0.25.
 """
-estimate_reading_time("-->string containing 50 pure words<--") => 0.25
+estimate_reading_time_in_minutes("-->string containing 50 pure words<--") => 0.25
 
 """
 4.
 Given a string of exactly 100 words containing hyphenated words,
 It returns 0.5
 """
-estimate_reading_time("-->string containing 100 words including hyphenated words<--") => 0.5
+estimate_reading_time_in_minutes("-->string containing 100 words including hyphenated words<--") => 0.5
 
 """
 5.
 Given a string of exactly 75 words
 It returns 0.5.
 """
-estimate_reading_time("-->string containing 75 words<--") => 0.5
+estimate_reading_time_in_minutes("-->string containing 75 words<--") => 0.5
 
 """
 6.
 Given a string of exactly 200 words containing em-dash with no spaces (e.g. ..."other way—in short"...)
 It returns 1
 """
-estimate_reading_time("-->string containing 200 words with em-dash<--") => 2.0
+estimate_reading_time_in_minutes("-->string containing 200 words with em-dash<--") => 2.0
 
 
 """
@@ -95,7 +95,7 @@ estimate_reading_time("-->string containing 200 words with em-dash<--") => 2.0
 Given a None value
 It throws an error
 """
-estimate_reading_time(None) throws an error
+estimate_reading_time_in_minutes(None) throws an error
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
@@ -103,21 +103,3 @@ _Encode each example as a test. You can add to the above list as you go._
 ## 4. Implement the Behaviour
 
 _After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour._
-
-Here's an example for you to start with:
-
-```python
-# EXAMPLE
-
-from lib.extract_uppercase import *
-
-"""
-Given a lower and an uppercase word
-It returns a list with the uppercase word
-"""
-def test_extract_uppercase_with_upper_then_lower():
-    result = extract_uppercase("hello WORLD")
-    assert result == ["WORLD"]
-```
-
-Ensure all test function names are unique, otherwise pytest will ignore them!

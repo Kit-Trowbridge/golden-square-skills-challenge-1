@@ -7,7 +7,7 @@ It returns 0
 
 """
 def test_estimate_reading_time_returns_0_for_empty_string():
-    result = estimate_reading_time("")
+    result = estimate_reading_time_in_minutes("")
     assert result == 0
 
 """
@@ -17,7 +17,7 @@ It returns 1
 """
 
 def test_estimate_reading_time_returns_1_for_200_pure_words():
-    result = estimate_reading_time(two_hundred_word_text_pure)
+    result = estimate_reading_time_in_minutes(two_hundred_word_text_pure)
     assert result == 1
 
 """
@@ -26,7 +26,7 @@ Given a string of exactly 50 pure words
 It returns 0.25.
 """
 def test_estimate_reading_time_returns_one_quarter_for_50_words():
-    result = estimate_reading_time(fifty_word_text)
+    result = estimate_reading_time_in_minutes(fifty_word_text)
     assert result == 0.25
 
 """
@@ -35,7 +35,7 @@ Given a string of exactly 100 words containing hyphenated words,
 It returns 0.5
 """
 def test_estimate_reading_time_returns_one_half_for_100_words_including_hyphens():
-    result = estimate_reading_time(hundred_word_text_with_hyphens)
+    result = estimate_reading_time_in_minutes(hundred_word_text_with_hyphens)
     assert result == 0.5
 
 """
@@ -44,7 +44,7 @@ Given a string of exactly 75 words
 It returns 0.5.
 """
 def test_estimate_reading_time_returns_one_half_for_75_words():
-    result = estimate_reading_time(seventy_five_word_text)
+    result = estimate_reading_time_in_minutes(seventy_five_word_text)
     assert result == 0.5
 
 # Text variables:
