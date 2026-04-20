@@ -11,21 +11,25 @@ _I want to verify that a text starts with a capital letter and ends with a suita
 _Include the name of the function, its parameters, return value, and side effects._
 
 ```python
-# EXAMPLE
 
-def extract_uppercase(mixed_words):
-    """Extracts uppercase words from a string
+# Do I want to check if every sentence does this? 
+# Maybe come back to
+# How to break a sentence up if it doesn't contain the punctuation
+def check_grammar(text):
+    """ Checks if a given text starts with a capital letter
+        and ends with a "!" or "."
 
-    Parameters: (list all parameters and their types)
-        mixed_words: a string containing words (e.g. "hello WORLD")
+    Parameters: 
+        text: a string
 
-    Returns: (state the return value and its type)
-        a list of strings, each one a word (e.g. ["WORLD"])
-
-    Side effects: (state any side effects)
-        This function doesn't print anything or have any other side-effects
+    Returns: 
+        True or False boolean
+       
+    Side effects:
+        None
     """
-    pass # Test-driving means _not_ writing any code here yet.
+    pass 
+
 ```
 
 ## 3. Create Examples as Tests
@@ -33,49 +37,37 @@ def extract_uppercase(mixed_words):
 _Make a list of examples of what the function will take and return._
 
 ```python
-# EXAMPLE
 
 """
-Given a lower and an uppercase word
-It returns a list with the uppercase word
+Given a blank text
+It returns False
 """
-extract_uppercase("hello WORLD") => ["WORLD"]
+check_grammar("") # => False
 
 """
-Given two uppercase words
-It returns a list with both words
+Given a single sentence text starting with a capital letter and ending with a period
+It returns True
 """
-extract_uppercase("HELLO WORLD") => ["HELLO", "WORLD"]
+check_grammar("Hello, world!") # => True
 
 """
-Given two lowercase words
-It returns an empty list
+Given a string of words with no capital letters or sentence ending punctuation
+It returns False
 """
-extract_uppercase("hello world") => []
+check_grammar("hello world") # => False
 
 """
-Given a lower and a mixed case word
-It returns an empty list
+Given a string containing multiple sentences, starting with a capital letter but not ending with a punctuation mark,
+It returns False
 """
-extract_uppercase("hello WoRLD") => []
+check_grammar("Hello world. It's nice to meet you") # => False
 
 """
-Given a lowercase word and an uppercase word with an exclamation mark
-It returns a list with the uppercase word, no exclamation mark
+Given a string containing multiple sentences, starting with a lowercase letter but ending with a punctuation mark,
+It returns False
 """
-extract_uppercase("hello WORLD!") => ["WORLD"]
+check_grammar("hello world. It's nice to meet you.") # => False
 
-"""
-Given an empty string
-It returns an empty list
-"""
-extract_uppercase("") => []
-
-"""
-Given a None value
-It throws an error
-"""
-extract_uppercase(None) throws an error
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
